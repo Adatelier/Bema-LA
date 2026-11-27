@@ -32,3 +32,21 @@
   box-sizing:border-box; grid-column:1/-1; flex:0 0 100%!important; width:100%!important; max-width:100%!important; min-width:0; float:none;
 }
 .in-index :is(.banner-wrapper,.banner,.banner-content,.banner-text):has(.bema-startup,.bema-sectors) { width:100%; max-width:none; }
+
+/* Classic middle banners — stack BEMA sections in full-width rows */
+.in-index .banners-content.body-banners:has(.bema-sectors,.bema-startup) {
+  display:flex !important; flex-direction:column; flex-wrap:nowrap;
+  width:100%; max-width:none; margin-inline:0 !important; padding-inline:0;
+}
+.in-index .banners-content.body-banners:has(.bema-sectors,.bema-startup) > div:has(.bema-sectors,.bema-startup) {
+  box-sizing:border-box; display:block; flex:0 0 auto !important; width:100% !important;
+  max-width:100% !important; min-width:0; float:none !important; margin:0 !important; padding:0 !important;
+}
+.in-index .banners-content.body-banners > div:has(.bema-sectors) { order:-2; }
+.in-index .banners-content.body-banners > div:has(.bema-startup) { order:-1; }
+.in-index .banners-content.body-banners > div:has(.bema-sectors,.bema-startup) > .banner-wrapper,
+.in-index .banners-content.body-banners > div:has(.bema-sectors,.bema-startup) > .banner-wrapper > span {
+  display:block; box-sizing:border-box; width:100% !important; max-width:none !important; margin:0; padding:0;
+}
+.in-index .bema-startup-panel > * { min-width:0; }
+.in-index .bema-startup h2 { overflow-wrap:normal; word-break:normal; }
