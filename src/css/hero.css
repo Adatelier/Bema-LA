@@ -28,3 +28,33 @@
 @media(min-width:768px) and (max-width:1023px) {
  .in-index .bema-hero h1 { font-size:var(--bema-h1); }
 }
+
+/* Hero v0.2 — full bleed and native banner overrides */
+.in-index .bema-hero {
+  width:100vw; max-width:none; margin-inline:calc(50% - 50vw);
+}
+@supports (width:100cqw) {
+  html:has(.bema-hero) { container-type:inline-size; }
+  .in-index .bema-hero { width:100cqw; margin-inline:calc(50% - 50cqw); }
+}
+.in-index :is(.carousel-wrapper,.carousel-inner,.carousel,.wide-carousel,.banner-wrapper,.banner,.banner-content,.banner-text,.item,.row):has(.bema-hero) {
+  max-width:none; margin-block:0; padding-block:0; border:0;
+}
+.in-index :is(.carousel-wrapper,.wide-carousel,.banner-wrapper,.banner,.banner-content,.banner-text):has(.bema-hero) {
+  width:100%; padding-inline:0; overflow:visible;
+}
+.in-index .bema-hero .bema-hero-actions a.bema-btn,
+.in-index .bema-hero .bema-hero-actions a.bema-btn:visited,
+.in-index .bema-hero .bema-hero-actions a.bema-btn:hover,
+.in-index .bema-hero .bema-hero-actions a.bema-btn:focus-visible { color:#fff !important; }
+.in-index .bema-hero .bema-hero-actions a.bema-btn-primary { background:var(--bema-primary); border-color:transparent; }
+.in-index .bema-hero .bema-hero-actions a.bema-btn-primary:hover { background:var(--bema-primary-hover); }
+.in-index .bema-hero .bema-hero-actions a.bema-btn-on-dark-ghost { background:transparent; border-color:rgb(255 255 255 / 28%); }
+.in-index .bema-hero .bema-hero-actions a.bema-btn-on-dark-ghost:hover { background:rgb(255 255 255 / 8%); }
+@media(min-width:768px) {
+ .in-index .bema-hero .bema-hero-inner { min-height:clamp(560px,calc(100svh - 108px),760px); padding-block:56px; }
+ .in-index .bema-hero .bema-hero-media { inset:0 -10% 0 25%; }
+ .in-index .bema-hero .bema-hero-media img { object-fit:contain; object-position:center center; }
+ .in-index .bema-hero::before { background:linear-gradient(90deg,#0a0a0b 0%,#0a0a0b 34%,rgb(10 10 11 / 85%) 44%,transparent 64%); }
+ .in-index .bema-hero h1 { font-size:clamp(36px,4.45vw,72px); max-width:14ch; }
+}
