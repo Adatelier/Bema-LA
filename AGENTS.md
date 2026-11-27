@@ -26,3 +26,5 @@
 - SamplesSlab: verify /vzorky/ sample-request page, eligibility for free samples, three-business-day dispatch promise and phone number before launch. CTA is not the actual request workflow.
 
 - Category listing: verify real Classic category DOM, native filters/sort/pagination and responsive cards. Implement LineupPlate with verified physical product heights, volume chips, active filters, grid/list, promo tiles and SEO FAQ in later iterations. Do not replace native commerce with mockup data.
+
+- Potisk article: replace temporary /lahve/ source with verified printable-only category; verify currency and availability, exact product drawing and print zones, price tiers, logo draft transfer and real inquiry endpoint; preview currently generic, pricing not implemented. Verify article editor preserves controls and native H1.
