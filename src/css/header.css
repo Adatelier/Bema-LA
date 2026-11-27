@@ -101,3 +101,52 @@
   #header .navigation-buttons .cart-count { display: flex; align-items: center; justify-content: center; width: 44px; padding: 0; position: relative; }
   #header .cart-price { display: none !important; }
 }
+
+
+/* Phase 3: top bar and vertical alignment */
+.in-index .top-navigation-bar,
+.in-index .top-navigation-bar .container,
+.in-index .top-navigation-bar .top-navigation-contacts,
+.in-index .top-navigation-bar .top-navigation-menu,
+.in-index .top-navigation-bar .top-navigation-menu-trigger,
+.in-index .top-navigation-bar .top-navigation-tools {
+  background-color: var(--bema-ink);
+  color: var(--bema-pet-300);
+}
+.in-index .top-navigation-bar .top-navigation-menu > ul,
+.in-index .top-navigation-bar .top-navigation-menu > ul > li {
+  background-color: transparent;
+}
+.in-index .top-navigation-bar a,
+.in-index .top-navigation-bar button,
+.in-index .top-navigation-bar .login-link {
+  color: var(--bema-pet-300);
+}
+.in-index .top-navigation-bar a:hover,
+.in-index .top-navigation-bar button:hover {
+  color: var(--bema-white);
+}
+@media (min-width: 1200px) {
+  #header > .navigation-wrapper {
+    padding-block: 0;
+    min-height: var(--bema-header-height);
+    grid-template-rows: minmax(var(--bema-header-height), auto);
+  }
+  #header #navigation,
+  #header #navigation .navigation-in,
+  #header #navigation .navigation-in > .menu-level-1 {
+    margin-block: 0;
+    padding-block: 0;
+  }
+  #header #navigation .menu-level-1 > li > a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    line-height: 1.3;
+  }
+  #header .site-name-wrapper,
+  #header .search,
+  #header .navigation-buttons {
+    align-self: center;
+  }
+}
