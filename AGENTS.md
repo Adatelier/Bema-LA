@@ -28,3 +28,5 @@
 - Category listing: verify real Classic category DOM, native filters/sort/pagination and responsive cards. Implement LineupPlate with verified physical product heights, volume chips, active filters, grid/list, promo tiles and SEO FAQ in later iterations. Do not replace native commerce with mockup data.
 
 - Potisk article: replace temporary /lahve/ source with verified printable-only category; verify currency and availability, exact product drawing and print zones, price tiers, logo draft transfer and real inquiry endpoint; preview currently generic, pricing not implemented. Verify article editor preserves controls and native H1.
+
+- SamplesPage: connect real secure request endpoint with server validation, spam protection, consent and monthly eligibility enforcement; verify sample-eligible products, category URLs, full catalogue search/pagination, ARES autofill, account prefill, compatible closures, product deep links and success state. Current form is explicitly a draft, not a submission. No personal data sent or stored.
