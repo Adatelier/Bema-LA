@@ -81,3 +81,10 @@
 .in-index .before-carousel .bema-hero {
   box-sizing:border-box; width:100%; max-width:none; margin:0;
 }
+
+/* Hero v0.4 — remove native homepage box separators */
+.in-index .homepage-box.before-carousel:has(.bema-hero) {
+  background-color: var(--bema-stage);
+  border-top: 0;
+  border-bottom: 0;
+}
