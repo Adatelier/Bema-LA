@@ -144,3 +144,47 @@ body { background-color: var(--bema-background); color: var(--bema-text); font-f
 .in-index .bema-startup h2 { font-family:var(--bema-font); font-stretch:125%; text-wrap:balance; }
 .in-index .bema-startup-step-head h3 { font-family:var(--bema-font); font-stretch:100%; }
 .in-index .bema-hero .bema-hero-proof dd { font-family:var(--bema-font-mono); }
+
+/* Classic homepage bottom banners — shared vertical layout for every current and future banner. */
+.in-index .footer-banners.row.banner-wrapper {
+  display:flex !important;
+  flex-direction:column;
+  flex-wrap:nowrap !important;
+  align-items:stretch;
+  gap:0;
+  box-sizing:border-box;
+  width:100% !important;
+  max-width:none !important;
+  min-width:0;
+  margin:0 !important;
+  padding:0 !important;
+}
+.in-index .footer-banners.row.banner-wrapper::before,
+.in-index .footer-banners.row.banner-wrapper::after { display:none; }
+.in-index .footer-banners.row.banner-wrapper > .footer-banner {
+  display:block !important;
+  box-sizing:border-box;
+  flex:0 0 auto !important;
+  width:100% !important;
+  max-width:100% !important;
+  min-width:0;
+  float:none !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+.in-index .footer-banners.row.banner-wrapper > .footer-banner > span {
+  display:block;
+  box-sizing:border-box;
+  width:100%;
+  max-width:none;
+  margin:0;
+  padding:0;
+}
+.in-index .footer-banners.row.banner-wrapper > .footer-banner > span > section[class^="bema-"] {
+  box-sizing:border-box;
+  width:100%;
+  min-width:0;
+  max-width:none;
+  overflow-wrap:normal;
+  word-break:normal;
+}
