@@ -188,3 +188,23 @@ body { background-color: var(--bema-background); color: var(--bema-text); font-f
   overflow-wrap:normal;
   word-break:normal;
 }
+
+/* Normalize BEMA CTA vertical alignment against native Classic banner link styles. */
+.in-index a.bema-btn, .in-index button.bema-btn {
+  box-sizing:border-box;
+  display:inline-flex !important;
+  flex-direction:row;
+  align-items:center !important;
+  justify-content:center !important;
+  vertical-align:middle;
+  padding-block:0 !important;
+  line-height:1.2 !important;
+  text-indent:0;
+  text-align:center;
+  white-space:normal;
+}
+.in-index .bema-btn::before, .in-index .bema-btn::after { content:none; }
+.in-index .bema-btn { min-height:44px; }
+.in-index .bema-btn.bema-btn-sm { min-height:36px; }
+.in-index .bema-btn.bema-btn-lg { min-height:52px; }
+.in-index .bema-btn.bema-btn-xl { min-height:60px; }
