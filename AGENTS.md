@@ -18,3 +18,5 @@
 - PrintSlab: verify production links to print inquiry and printing information, minimum order 1,000 units and service technologies. Homepage teaser is local preview only; full printing configurator remains separate.
 
 - B2BBento: homepage CSV animation and invoice toggle are demonstration only. Verify real ERP CSV import, reorder, invoice eligibility, contract price lists, order templates, registration/login URLs before production; do not advertise unsupported B2B features. Demo quantities and order identifiers are illustrative.
+
+- Newsletter: preserve native Shoptet subscription/consent/validation, verify exact form markup and successful subscription; the mockup's first-order −5% offer requires confirmed coupon automation before launch.
