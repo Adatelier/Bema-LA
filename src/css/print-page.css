@@ -54,3 +54,15 @@
 .bema-pp-cta a.bema-btn {background:white;color:var(--bema-ink)!important}
 @media(min-width:900px){.bema-pp-grid {grid-template-columns:minmax(0,7fr) minmax(0,5fr)}.bema-pp-steps {grid-template-columns:repeat(5,minmax(0,1fr))}}
 @media(max-width:599px){.bema-pp-stage {min-height:360px}.bema-pp-bottle {height:300px;width:150px}.bema-pp-card {flex-basis:72%}}
+
+/* Potisk v1.1 — editor-safe specification grid and article title */
+.bema-print-page > .bema-pp-grid:first-child { align-items:center; padding-top:clamp(20px,3vw,40px); }
+.bema-print-page .bema-pp-spec { display:grid!important; grid-template-columns:repeat(2,minmax(0,1fr)); align-self:center; gap:0; background:var(--bema-pet-50,#f2f5f8); border:1px solid var(--bema-pet-200); border-radius:20px; overflow:hidden; }
+.bema-print-page .bema-pp-spec > div { min-width:0; padding:22px; border-bottom:1px solid var(--bema-pet-200); }
+.bema-print-page .bema-pp-spec > div:nth-child(odd) { border-right:1px solid var(--bema-pet-200); }
+.bema-print-page .bema-pp-spec > div:nth-last-child(-n+2) { border-bottom:0; }
+.bema-print-page .bema-pp-spec-label { display:block; font-size:13px; color:var(--bema-pet-600); margin:0 0 8px; }
+.bema-print-page .bema-pp-spec-value { display:block; font:500 14px/1.5 var(--bema-font-mono); color:var(--bema-ink); overflow-wrap:break-word; }
+main.content:has(.bema-print-page) > h1, main.content:has(.bema-print-page) .content-inner > h1 { font-family:var(--bema-font); font-size:18px; font-weight:600; color:var(--bema-pet-600); margin:16px 0 0; }
+.bema-print-page .bema-pp-title { font-size:clamp(36px,4.2vw,64px); }
+@media(max-width:480px) { .bema-print-page .bema-pp-spec > div { padding:14px; } }
