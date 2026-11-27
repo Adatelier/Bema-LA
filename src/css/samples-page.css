@@ -41,3 +41,29 @@
 @media(min-width:1000px){.bema-sp-layout{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}.bema-sp-form-card{position:sticky;top:var(--bema-sp-top,120px)}}
 @media(max-width:999px){.bema-sp-mobile:not([hidden]){display:flex;position:sticky;bottom:0;z-index:10;align-items:center;justify-content:space-between;gap:10px;padding:12px;background:#fff;border:1px solid #e1e7ed;border-radius:12px}.bema-sp-mobile button{border:0;background:#0d1014;color:white;padding:10px;border-radius:999px}}
 @media(max-width:480px){.bema-sp-slots{grid-template-columns:repeat(3,minmax(0,1fr))}.bema-sp-row{grid-template-columns:48px minmax(0,1fr) auto;gap:7px;padding:8px 0}.bema-sp-row img{width:48px;height:48px}}
+
+/* SamplesPage v1.1 — override Classic article form resets */
+#content .bema-samples-page .bema-sp-form :is(input:not([type=checkbox]),select,textarea),
+#content .bema-samples-page input.bema-sp-search,
+body .content-inner .bema-samples-page .bema-sp-form :is(input:not([type=checkbox]),select,textarea),
+body .content-inner .bema-samples-page input.bema-sp-search {
+ display:block!important;box-sizing:border-box!important;appearance:none;width:100%!important;max-width:none!important;min-width:0;min-height:46px!important;height:46px!important;padding:10px 14px!important;margin:0!important;border:1px solid #d3dbe3!important;border-radius:10px!important;background:#fff!important;color:#0d1014!important;font:400 15px/1.4 var(--bema-font)!important;box-shadow:none!important;
+}
+#content .bema-samples-page .bema-sp-form select,body .content-inner .bema-samples-page .bema-sp-form select {appearance:auto;padding-right:24px!important}
+#content .bema-samples-page .bema-sp-form textarea,body .content-inner .bema-samples-page .bema-sp-form textarea {height:auto!important;min-height:96px!important;resize:vertical}
+.bema-samples-page :is(input,select,textarea,button):focus-visible {outline:2px solid #0d1014;outline-offset:3px}
+.bema-samples-page .bema-sp-form label,.bema-samples-page .bema-sp-search-label {margin:0;gap:8px;color:#3b4550;font:550 14px/1.4 var(--bema-font)}
+.bema-samples-page .bema-sp-form {gap:16px}
+.bema-samples-page .bema-sp-form-card {padding:clamp(18px,2vw,28px);background:#fff}
+.bema-samples-page .bema-sp-row a {color:#0d1014!important;text-decoration:none!important}
+.bema-samples-page .bema-sp-row a:hover {text-decoration:underline!important;color:#dc0612!important}
+.bema-samples-page .bema-sp-row img {display:block;margin:0!important;mix-blend-mode:multiply;object-fit:contain}
+.bema-samples-page .bema-sp-slot {min-height:132px}
+.bema-samples-page .bema-sp-slot button:not(.bema-sp-remove) {display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:44px;color:#616d7a;font-weight:550}
+.bema-samples-page .bema-sp-slot:has(button:not(.bema-sp-remove)):hover {border-color:#0d1014;background:#f2f5f8}
+.bema-samples-page .bema-sp-chips {padding:0;margin:16px 0}
+.bema-samples-page .bema-sp-add {min-height:40px;min-width:76px}
+.bema-samples-page .bema-sp-form .bema-sp-consent {display:flex;gap:10px;align-items:flex-start;font-weight:400}
+.bema-samples-page .bema-sp-form .bema-sp-consent input {width:16px;height:16px;margin:3px 0 0;flex:none}
+.bema-samples-page .bema-sp-form .bema-sp-submit {min-height:52px}
+@media(max-width:480px){.bema-samples-page .bema-sp-slot{min-height:100px}}
