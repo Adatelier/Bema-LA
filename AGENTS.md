@@ -24,3 +24,5 @@
 - ProductionSpec: verify monthly manufacturing capacity, machine counts, volume ranges, certification dates, UCHEM description and destination URLs before launch; use original production photo on Shoptet CDN.
 
 - SamplesSlab: verify /vzorky/ sample-request page, eligibility for free samples, three-business-day dispatch promise and phone number before launch. CTA is not the actual request workflow.
+
+- Category listing: verify real Classic category DOM, native filters/sort/pagination and responsive cards. Implement LineupPlate with verified physical product heights, volume chips, active filters, grid/list, promo tiles and SEO FAQ in later iterations. Do not replace native commerce with mockup data.
