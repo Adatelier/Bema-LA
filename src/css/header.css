@@ -69,3 +69,35 @@
 @media (hover: hover) {
   #header .search-form button[type=submit]:hover { background: var(--bema-primary-hover); }
 }
+
+
+/* Phase 2: compact desktop layout; preserve native menu helper */
+#header #navigation .menu-level-1 > li { border: 0; background: transparent; }
+#header #navigation .menu-level-1 > li > a { border: 0; }
+#header #navigation .menu-level-1 > li::before,
+#header #navigation .menu-level-1 > li::after { border-color: transparent; }
+.in-index .top-navigation-bar { background: var(--bema-ink); color: var(--bema-pet-300); border-bottom: 1px solid var(--bema-pet-800); }
+.in-index .top-navigation-bar a { color: var(--bema-pet-300); }
+@media (min-width: 1200px) {
+  #header > .navigation-wrapper {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr) auto minmax(180px, 260px) 52px;
+    align-items: center;
+    column-gap: 12px;
+    min-height: var(--bema-header-height);
+    position: relative;
+  }
+  #header .header-top { display: contents; }
+  #header .site-name-wrapper { grid-area: 1 / 1; width: auto; margin: 0; padding: 0; min-width: 0; }
+  #header .site-name { margin: 0; }
+  #header .site-name img { width: 120px; max-height: 36px; height: auto; object-fit: contain; }
+  #header #navigation { grid-area: 1 / 2; width: 100%; min-width: 0; margin: 0; float: none; }
+  #header #navigation .menu-level-1 > li > a { padding-inline: 8px; font-size: 13px; white-space: nowrap; }
+  #header .menu-helper { grid-area: 1 / 3; position: relative; margin: 0; float: none; }
+  #header .search { grid-area: 1 / 4; width: 100%; max-width: none; min-width: 0; margin: 0; padding: 0; }
+  #header .search-input { height: 38px; font-size: 13px; padding-inline: 12px 65px; }
+  #header .search-form button[type=submit] { height: 30px; min-height: 30px; padding-inline: 9px; font-size: 11px; }
+  #header .navigation-buttons { grid-area: 1 / 5; width: auto; margin: 0; padding: 0; }
+  #header .navigation-buttons .cart-count { display: flex; align-items: center; justify-content: center; width: 44px; padding: 0; position: relative; }
+  #header .cart-price { display: none !important; }
+}
