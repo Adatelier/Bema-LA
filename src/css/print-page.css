@@ -114,3 +114,28 @@ main.content:has(.bema-print-page) > h1, main.content:has(.bema-print-page) .con
 .bema-print-page #obaly-k-potisku .bema-pp-track {margin-top:12px;padding-inline:0}
 @media(min-width:600px) and (max-width:899px) {.bema-print-page #postup .bema-pp-steps {grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:599px) {.bema-print-page .bema-pp-table-wrap :is(th,td) {padding:12px 14px!important}}
+
+/* Potisk v1.4 — override Classic article table resets */
+#content .bema-print-page .bema-pp-table-wrap table tr > th,
+#content .bema-print-page .bema-pp-table-wrap table tr > td,
+body .content-inner .bema-print-page .bema-pp-table-wrap table tr > th,
+body .content-inner .bema-print-page .bema-pp-table-wrap table tr > td {
+  display:table-cell!important;
+  padding:18px 24px!important;
+  border:0!important;
+  border-bottom:1px solid #e1e7ed!important;
+  line-height:1.5!important;
+  vertical-align:middle!important;
+  text-align:left!important;
+}
+#content .bema-print-page .bema-pp-table-wrap table tr:last-child > td,
+body .content-inner .bema-print-page .bema-pp-table-wrap table tr:last-child > td {border-bottom:0!important}
+body .content-inner .bema-print-page .bema-pp-table-wrap table {table-layout:fixed;width:100%!important;border-collapse:collapse!important}
+body .content-inner .bema-print-page .bema-pp-table-wrap table tr > :first-child {width:24%}
+body .content-inner .bema-print-page .bema-pp-table-wrap table tr > :nth-child(2) {width:52%}
+body .content-inner .bema-print-page .bema-pp-table-wrap table tr > :last-child {width:24%}
+body .content-inner .bema-print-page .bema-pp-table-wrap table th {background:#f2f5f8!important;font-weight:600}
+@media(max-width:599px) {
+#content .bema-print-page .bema-pp-table-wrap table tr > :is(th,td),
+body .content-inner .bema-print-page .bema-pp-table-wrap table tr > :is(th,td) {padding:12px 14px!important}
+}
