@@ -22,3 +22,5 @@
 - Newsletter: preserve native Shoptet subscription/consent/validation, verify exact form markup and successful subscription; the mockup's first-order −5% offer requires confirmed coupon automation before launch.
 
 - ProductionSpec: verify monthly manufacturing capacity, machine counts, volume ranges, certification dates, UCHEM description and destination URLs before launch; use original production photo on Shoptet CDN.
+
+- SamplesSlab: verify /vzorky/ sample-request page, eligibility for free samples, three-business-day dispatch promise and phone number before launch. CTA is not the actual request workflow.
