@@ -1,41 +1,53 @@
-/* BEMA footer enhancement: reuse native logo and preserve Shoptet attribution. */
+/* BEMA footer v0.5 */
 (() => {
   function initFooter() {
     const footer = document.querySelector('#footer');
     if (!footer) return;
     const brand = footer.querySelector('.bema-footer-brand');
-    if (brand && !brand.querySelector('.site-name.bema-footer-logo')) {
-      const nativeLogo = footer.querySelector('.site-name');
-      if (nativeLogo && !brand.contains(nativeLogo)) {
-        const grid = nativeLogo.closest('.custom-footer');
-        let wrapper = nativeLogo;
-        if (grid) {
-          while (wrapper.parentElement && wrapper.parentElement !== grid) wrapper = wrapper.parentElement;
+    const host = brand?.closest('.custom-footer');
+    if (brand && host && !host.querySelector('.bema-footer-grid')) {
+      const columns = [...host.querySelectorAll('.bema-footer-column')];
+      if (columns.length === 5) {
+        const native = footer.querySelector('.site-name');
+        const originalParent = native?.parentElement;
+        if (native && !brand.contains(native)) {
+          const link = native.querySelector('a');
+          if (link) {
+            brand.querySelector('.bema-footer-logo')?.remove();
+            link.classList.add('bema-footer-logo');
+            const image = link.querySelector('img');
+            if (image) image.alt = 'BEMA';
+            brand.prepend(link);
+            native.remove();
+            if (originalParent && originalParent !== host && originalParent !== footer &&
+                !originalParent.textContent.trim() && !originalParent.querySelector('img,a,button,input,form,.bema-footer-column')) {
+              originalParent.classList.add('bema-footer-logo-source');
+            }
+          }
         }
-        const placeholder = brand.querySelector('.bema-footer-logo');
-        if (placeholder) placeholder.remove();
-        nativeLogo.classList.add('bema-footer-logo');
-        const image = nativeLogo.querySelector('img');
-        if (image) image.alt = 'BEMA';
-        brand.prepend(nativeLogo);
-        if (wrapper !== nativeLogo && !wrapper.textContent.trim() && !wrapper.querySelector('img, a, button, input, form, .bema-footer-column')) {
-          wrapper.classList.add('bema-footer-logo-source');
-        }
+        const grid = document.createElement('div');
+        grid.className = 'bema-footer-grid';
+        host.prepend(grid);
+        grid.append(...columns);
+        host.classList.add('bema-footer-ready');
       }
     }
-    if (footer.querySelector('.bema-footer-credit')) return;
-    const signature = footer.querySelector('#signature, .signature');
-    const shoptet = signature?.matches('a') ? signature : (signature?.querySelector('a[href*="shoptet"]') || footer.querySelector('.footer-bottom a[href*="shoptet"], a[href*="shoptet"][title*="Shoptet"]'));
-    if (!shoptet && !signature) return;
-    const credit = document.createElement('span');
-    credit.className = 'bema-footer-credit';
-    credit.append(' a ');
+    const signature = document.getElementById('signature');
+    if (!signature || signature.querySelector('.bema-footer-credit, .AdatelierSignature')) return;
     const link = document.createElement('a');
-    link.href = 'https://www.adatelier.sk/';
-    link.textContent = 'Adatelier';
-    credit.append(link);
-    (shoptet || signature).after(credit);
+    link.href = 'https://adatelier.sk/';
+    link.className = 'bema-footer-credit';
+    link.append('a ');
+    const image = document.createElement('img');
+    image.src = 'https://adatelier.sk/wp-content/uploads/2025/06/Adatelier-white-logo.png';
+    image.width = 25;
+    image.height = 25;
+    image.alt = '';
+    image.loading = 'lazy';
+    image.decoding = 'async';
+    link.append(image, ' Adatelier');
+    signature.appendChild(link);
   }
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initFooter, { once:true });
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initFooter, { once: true });
   else initFooter();
 })();
