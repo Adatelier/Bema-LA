@@ -1,0 +1,19 @@
+/* SamplesSlab — final homepage CTA */
+.in-index .bema-samples { padding-block:clamp(32px,4vw,64px); font-family:var(--bema-font); text-align:left; }
+.in-index .bema-samples-panel { position:relative; isolation:isolate; overflow:hidden; border-radius:36px; padding:48px 20px; background:var(--bema-red-600); color:white; }
+.in-index .bema-samples-rings { position:absolute; z-index:-1; width:670px; height:640px; max-width:none; right:-260px; top:50%; transform:translateY(-50%) rotate(-8deg); opacity:.14; pointer-events:none; object-fit:contain; margin:0; }
+.in-index .bema-samples h2 { font-family:var(--bema-font); font-size:var(--bema-display-l); font-weight:800; font-stretch:125%; line-height:1.04; letter-spacing:-.025em; color:white; max-width:16ch; margin:0; text-wrap:balance; }
+.in-index .bema-samples-lead { color:rgb(255 255 255 / 86%); max-width:40em; font-size:clamp(16px,1.4vw,19px); line-height:1.55; margin:24px 0 0; }
+.in-index .bema-samples-steps { display:grid; gap:20px; list-style:none; padding:0; margin:48px 0 0; max-width:56rem; }
+.in-index .bema-samples-steps li { display:flex; align-items:center; gap:12px; list-style:none; margin:0; padding:0; min-width:0; color:white; font-size:16px; font-weight:560; line-height:1.4; }
+.in-index .bema-samples-steps li::before { content:none; }
+.in-index .bema-samples-step-number { display:grid; place-items:center; width:28px; height:28px; flex:0 0 28px; border-radius:50%; background:rgb(255 255 255 / 16%); font-family:var(--bema-font-mono); font-size:13px; }
+.in-index .bema-samples-actions { display:flex; flex-wrap:wrap; align-items:center; gap:12px; margin-top:48px; }
+.in-index .bema-samples-actions .bema-btn-on-red { background:white; color:var(--bema-red-700)!important; border-color:white; }
+.in-index .bema-samples-actions .bema-btn-on-red:hover { background:var(--bema-red-50); border-color:var(--bema-red-50); }
+.in-index .bema-samples-actions .bema-btn-on-dark-ghost { color:white!important; border-color:rgb(255 255 255 / 40%); }
+.in-index .bema-samples-actions svg { width:20px; height:20px; flex:none; }
+@media(min-width:600px) { .in-index .bema-samples-steps { grid-template-columns:repeat(3,minmax(0,1fr)); gap:0; } .in-index .bema-samples-steps li { padding-inline:24px; border-left:1px solid rgb(255 255 255 / 24%); } .in-index .bema-samples-steps li:first-child { border:0; padding-left:0; } }
+@media(min-width:768px) { .in-index .bema-samples-panel { padding:64px 40px; } }
+@media(min-width:1024px) { .in-index .bema-samples-panel { padding:80px 64px; } }
+@media(max-width:599px) { .in-index .bema-samples-actions .bema-btn { width:100%; } .in-index .bema-samples-rings { width:440px; height:420px; right:-200px; } .in-index .bema-samples-actions,.in-index .bema-samples-steps { margin-top:32px; } }
