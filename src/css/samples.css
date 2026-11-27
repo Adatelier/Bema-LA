@@ -17,3 +17,14 @@
 @media(min-width:768px) { .in-index .bema-samples-panel { padding:64px 40px; } }
 @media(min-width:1024px) { .in-index .bema-samples-panel { padding:80px 64px; } }
 @media(max-width:599px) { .in-index .bema-samples-actions .bema-btn { width:100%; } .in-index .bema-samples-rings { width:440px; height:420px; right:-200px; } .in-index .bema-samples-actions,.in-index .bema-samples-steps { margin-top:32px; } }
+
+/* SamplesSlab v1.1 — compact CTA, balanced headline and readable steps */
+.in-index .bema-samples h2 { font-size:clamp(30px,4vw,60px); max-width:22ch; }
+.in-index .bema-samples-lead { margin-top:20px; }
+.in-index .bema-samples-steps { max-width:920px; margin-top:28px; }
+.in-index .bema-samples-steps li { overflow-wrap:normal; word-break:normal; }
+.in-index .bema-samples-steps li > span:last-child { min-width:0; }
+.in-index .bema-samples-actions { margin-top:28px; }
+@media(min-width:600px) { .in-index .bema-samples-steps { grid-template-columns:minmax(0,1fr) minmax(0,1.15fr) minmax(0,1.5fr); } .in-index .bema-samples-steps li { padding-inline:clamp(12px,1.5vw,24px); } }
+@media(min-width:1024px) { .in-index .bema-samples-panel { padding-block:56px; } .in-index .bema-samples h2 { max-width:min(100%,23ch); } }
+@media(max-width:599px) { .in-index .bema-samples-panel { padding-block:36px; } }
