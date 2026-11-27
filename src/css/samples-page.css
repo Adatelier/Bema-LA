@@ -1,0 +1,43 @@
+/* Samples request article */
+.content-inner:has(.bema-samples-page){width:100%;max-width:none!important}
+.bema-samples-page{font-family:var(--bema-font);color:var(--bema-ink);line-height:1.5;text-align:left}
+.bema-samples-page *{box-sizing:border-box}
+.bema-samples-page h2{font-family:var(--bema-font);font-weight:720;font-stretch:115%;font-size:clamp(23px,2.4vw,36px);line-height:1.15;margin:0 0 20px;color:var(--bema-ink)}
+.bema-samples-page .bema-sp-head h2{font-size:clamp(36px,5vw,72px);font-weight:800;font-stretch:125%}
+.bema-sp-head{padding:24px 0 32px;border-bottom:1px solid #e1e7ed}
+.bema-sp-head p{max-width:70ch;font-size:18px;color:#525d6a}
+.bema-sp-steps{display:grid;gap:12px;list-style:none!important;padding:0!important;margin:24px 0 0;counter-reset:bema-sp}
+.bema-sp-steps li{display:flex;align-items:center;gap:12px;list-style:none!important;counter-increment:bema-sp}
+.bema-sp-steps li::before{content:counter(bema-sp)!important;position:static!important;display:grid;place-items:center;background:#eaeff3;border-radius:50%;width:28px;height:28px;flex:0 0 28px}
+.bema-sp-layout{display:grid;gap:32px;padding-block:36px;align-items:start}
+.bema-sp-layout>*{min-width:0}
+.bema-sp-layout section{margin-bottom:32px}
+.bema-sp-count{font:400 14px var(--bema-font-mono);color:#616d7a}
+.bema-sp-slots{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-bottom:16px}
+.bema-sp-slot{position:relative;min-width:0;min-height:110px;border:1px dashed #b8c3ce;border-radius:16px;background:#f8fafb;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px;gap:5px;text-align:center;font-size:12px;overflow-wrap:anywhere}
+.bema-sp-slot img{width:100%;height:85px;object-fit:contain}
+.bema-sp-slot button{border:0;background:transparent;color:#0d1014;cursor:pointer;font:inherit}
+.bema-sp-slot .bema-sp-remove{position:absolute;top:3px;right:3px;border-radius:50%;background:white;width:25px;height:25px;font-size:18px}
+.bema-sp-chips{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+.bema-sp-chips button,.bema-sp-add{border:1px solid #d3dbe3;background:white;color:#0d1014;border-radius:999px;padding:10px 15px;font:600 13px var(--bema-font);cursor:pointer}
+.bema-sp-chips button[aria-pressed=true],.bema-sp-add[aria-pressed=true]{background:#0d1014;color:white}
+.bema-sp-add:disabled{opacity:.45;cursor:not-allowed}
+.bema-sp-row{display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:12px;align-items:center;padding:12px;border-bottom:1px solid #e1e7ed}
+.bema-sp-row img{width:64px;height:64px;object-fit:contain;background:#eaeff3;border-radius:10px}
+.bema-sp-row strong,.bema-sp-row small{display:block}
+.bema-sp-row small{color:#616d7a;font-family:var(--bema-font-mono)}
+.bema-sp-form-card{padding:24px;border:1px solid #d3dbe3;border-radius:24px;background:white}
+.bema-sp-form-card h2{font-size:24px}
+.bema-sp-form{display:grid;gap:14px}
+.bema-sp-form label,.bema-sp-search-label{display:grid;gap:6px;font-weight:550;font-size:14px}
+.bema-samples-page :is(input:not([type=checkbox]),select,textarea){display:block;width:100%!important;max-width:none!important;min-width:0;min-height:44px;padding:10px 12px!important;border:1px solid #d3dbe3!important;border-radius:10px!important;background:#fff;color:#0d1014;font:400 15px/1.4 var(--bema-font);margin:0}
+.bema-sp-form .bema-sp-consent{display:flex;align-items:flex-start;gap:8px;font-size:13px;font-weight:400}
+.bema-sp-consent input{flex:none;accent-color:#0d1014}
+.bema-sp-form .bema-sp-submit{border:0;border-radius:999px;background:#dc0612;color:white;min-height:52px;padding:12px;font:650 16px var(--bema-font);cursor:pointer}
+.bema-sp-submit:disabled{opacity:.45;cursor:not-allowed}
+.bema-sp-note,.bema-sp-status,.bema-sp-message{font-size:13px;color:#525d6a;margin:12px 0}
+.bema-sp-mobile{display:none}
+@media(min-width:600px){.bema-sp-steps{grid-template-columns:repeat(3,minmax(0,1fr));max-width:900px}}
+@media(min-width:1000px){.bema-sp-layout{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}.bema-sp-form-card{position:sticky;top:var(--bema-sp-top,120px)}}
+@media(max-width:999px){.bema-sp-mobile:not([hidden]){display:flex;position:sticky;bottom:0;z-index:10;align-items:center;justify-content:space-between;gap:10px;padding:12px;background:#fff;border:1px solid #e1e7ed;border-radius:12px}.bema-sp-mobile button{border:0;background:#0d1014;color:white;padding:10px;border-radius:999px}}
+@media(max-width:480px){.bema-sp-slots{grid-template-columns:repeat(3,minmax(0,1fr))}.bema-sp-row{grid-template-columns:48px minmax(0,1fr) auto;gap:7px;padding:8px 0}.bema-sp-row img{width:48px;height:48px}}
