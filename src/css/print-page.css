@@ -96,3 +96,21 @@ main.content:has(.bema-print-page) > h1, main.content:has(.bema-print-page) .con
  .bema-print-page #configurator .bema-pp-bottle {height:clamp(260px,calc(100vh - 220px),460px);width:auto;aspect-ratio:1/2}
 }
 @media(max-width:899px) {.bema-print-page #configurator .bema-pp-stage {position:relative}.bema-print-page #configurator .bema-pp-controls fieldset {padding:16px}}
+
+/* Potisk v1.3 — article table and process spacing */
+.bema-print-page > section {padding-block:clamp(24px,3vw,40px)}
+.bema-print-page .bema-pp-table-wrap {border:1px solid var(--bema-pet-200,#e1e7ed);border-radius:20px;overflow-x:auto;margin-top:24px;background:#fff}
+.bema-print-page .bema-pp-table-wrap table,.bema-print-page table.bema-pp-table {width:100%!important;min-width:480px;border-collapse:collapse!important;border-spacing:0!important;margin:0!important;background:#fff;font-family:var(--bema-font)}
+.bema-print-page .bema-pp-table-wrap :is(th,td),.bema-print-page table.bema-pp-table :is(th,td) {padding:18px 24px!important;border:0!important;border-bottom:1px solid var(--bema-pet-200,#e1e7ed)!important;text-align:left;vertical-align:middle;font-size:15px;line-height:1.45}
+.bema-print-page .bema-pp-table-wrap th {background:var(--bema-pet-50,#f2f5f8)!important;color:var(--bema-pet-600);font-weight:600;font-size:13px}
+.bema-print-page .bema-pp-table-wrap td:first-child {font-weight:650;color:var(--bema-ink)}
+.bema-print-page .bema-pp-table-wrap td:last-child {font-family:var(--bema-font-mono);font-size:14px}
+.bema-print-page .bema-pp-table-wrap tbody tr:last-child td {border-bottom:0!important}
+.bema-print-page #postup .bema-pp-steps {gap:16px;margin-top:24px}
+.bema-print-page #postup .bema-pp-steps li {border:1px solid var(--bema-pet-200,#e1e7ed);border-radius:18px;background:var(--bema-pet-50,#f2f5f8);padding:22px 18px;margin:0}
+.bema-print-page #postup .bema-pp-steps li::before {font-size:24px;color:var(--bema-pet-500);margin-bottom:20px}
+.bema-print-page #postup .bema-pp-steps h3 {font-family:var(--bema-font);font-weight:650;font-size:18px;line-height:1.3;margin:0 0 8px}
+.bema-print-page #postup .bema-pp-steps p {margin:0;font-size:14px;line-height:1.5}
+.bema-print-page #obaly-k-potisku .bema-pp-track {margin-top:12px;padding-inline:0}
+@media(min-width:600px) and (max-width:899px) {.bema-print-page #postup .bema-pp-steps {grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:599px) {.bema-print-page .bema-pp-table-wrap :is(th,td) {padding:12px 14px!important}}
