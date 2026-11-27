@@ -1,0 +1,33 @@
+/* EcoSection — original 16:9 film and four statistics */
+.in-index .bema-eco { padding-block:clamp(40px,5vw,72px); color:var(--bema-ink); background:var(--bema-background); font-family:var(--bema-font); text-align:left; }
+.in-index .bema-eco-head { display:flex; align-items:flex-end; justify-content:space-between; flex-wrap:wrap; gap:24px; margin-bottom:32px; }
+.in-index .bema-eco-head h2 { font-family:var(--bema-font); font-size:var(--bema-h2); font-weight:720; font-stretch:115%; line-height:1.1; letter-spacing:-.018em; margin:0 0 16px; color:var(--bema-ink); }
+.in-index .bema-eco-head p { max-width:672px; font-size:clamp(16px,1.4vw,19px); color:var(--bema-pet-600); margin:0; }
+.in-index .bema-eco-actions { display:flex; align-items:center; flex-wrap:wrap; gap:12px; }
+.in-index .bema-eco-actions a { color:var(--bema-ink)!important; }
+.in-index .bema-eco-actions .bema-eco-link { text-decoration:underline; font-weight:600; }
+.in-index .bema-eco-grid { display:grid; gap:32px; }
+.in-index .bema-eco-grid > * { min-width:0; }
+.in-index .bema-eco-film { position:relative; isolation:isolate; aspect-ratio:16/9; background:var(--bema-plate); overflow:hidden; border-radius:28px; }
+.in-index .bema-eco-film > img,.in-index .bema-eco-film > video { display:block; position:absolute; inset:0; width:100%; height:100%; object-fit:cover; margin:0; }
+.in-index .bema-eco-film > video { opacity:0; transition:opacity .4s; }
+.in-index .bema-eco-film.bema-film-shown > video { opacity:1; }
+.in-index .bema-eco-toggle { position:absolute; z-index:2; bottom:20px; left:20px; width:44px; height:44px; border-radius:50%; border:1px solid rgb(255 255 255 / 30%); background:rgb(13 16 20 / 65%); color:white; display:grid; place-items:center; cursor:pointer; }
+.in-index .bema-eco-toggle[hidden] { display:none; }
+.in-index .bema-eco-toggle svg { width:18px; height:18px; }
+.in-index .bema-eco-toggle .bema-eco-pause,.in-index .bema-eco-toggle[aria-pressed=true] .bema-eco-play { display:none; }
+.in-index .bema-eco-toggle[aria-pressed=true] .bema-eco-pause { display:block; }
+.in-index .bema-eco-stats { display:grid; list-style:none; margin:0; padding:0; border-bottom:1px solid var(--bema-pet-200); }
+.in-index .bema-eco-stats > li { list-style:none; display:flex; align-items:flex-end; justify-content:space-between; gap:16px; margin:0; padding:24px 0; border-top:1px solid var(--bema-pet-200); }
+.in-index .bema-eco-stats > li::before { content:none; }
+.in-index .bema-eco-stat-copy { flex:1; min-width:0; }
+.in-index .bema-eco-number { font-family:var(--bema-font); font-size:clamp(30px,3.5vw,56px); font-stretch:125%; font-weight:800; line-height:1.04; letter-spacing:-.025em; color:var(--bema-ink); margin:0 0 8px; white-space:nowrap; font-variant-numeric:tabular-nums; }
+.in-index .bema-eco-stat-copy p:last-child { margin:0; font-size:14px; color:var(--bema-pet-600); line-height:1.5; }
+.in-index .bema-eco-visual { width:120px; height:24px; flex:0 0 120px; }
+@media(min-width:768px) { .in-index .bema-eco-stats { grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:var(--bema-gutter); } }
+@media(min-width:1440px) { .in-index .bema-eco-grid { grid-template-columns:minmax(0,8fr) minmax(0,4fr); gap:var(--bema-gutter); } .in-index .bema-eco-stats { display:flex; flex-direction:column; } .in-index .bema-eco-stats > li { flex:1; padding:12px 0; } .in-index .bema-eco-number { font-size:clamp(28px,2.7vw,48px); } }
+@media(max-width:420px) { .in-index .bema-eco-visual { width:90px; flex-basis:90px; } }
+@media(prefers-reduced-motion:reduce) { .in-index .bema-eco-film > video { transition:none; } }
+.in-index :is(.banners-content,.footer-banners,.banners-footer,.banners-row,.row):has(.bema-eco):not(:has(.bema-footer-column)) > :is(div,li):has(.bema-eco) { width:100%!important; max-width:100%!important; flex:0 0 100%!important; grid-column:1/-1; float:none; margin:0; padding:0!important; min-width:0; }
+.in-index .banner-wrapper:has(.bema-eco),.in-index .banner-wrapper > span:has(.bema-eco) { display:block; width:100%; max-width:none; margin:0; padding:0; }
+.in-index #footer .custom-footer.bema-footer-ready > :has(.bema-eco) { display:block!important; width:100%!important; }
