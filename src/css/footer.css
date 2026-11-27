@@ -1,0 +1,36 @@
+/* BEMA footer: five server-rendered Shoptet HTML banners */
+#footer { background:var(--bema-ink); color:var(--bema-pet-300); border:0; }
+#footer .container { max-width:var(--bema-container); width:100%; box-sizing:border-box; padding-inline:var(--bema-gutter); }
+#footer .custom-footer { background:transparent; border:0; }
+#footer .custom-footer:has(.bema-footer-column) { display:grid; grid-template-columns:minmax(0,1fr); gap:32px; padding-block:48px; align-items:start; }
+#footer .custom-footer:has(.bema-footer-column)::before,
+#footer .custom-footer:has(.bema-footer-column)::after { display:none; }
+#footer .custom-footer > :has(.bema-footer-column),
+#footer .custom-footer > .bema-footer-column { width:auto; max-width:none; min-width:0; flex:none; float:none; margin:0; padding:0; background:transparent; }
+#footer .custom-footer :has(> .bema-footer-column) { background:transparent; }
+#footer .bema-footer-column { min-width:0; color:var(--bema-pet-300); font-family:var(--bema-font); font-size:14px; line-height:1.55; text-align:left; }
+#footer .bema-footer-title { margin:0 0 16px; color:var(--bema-white); font-size:15px; font-weight:700; line-height:1.3; text-transform:none; letter-spacing:0; }
+#footer .bema-footer-column ul { list-style:none; padding:0; margin:0; }
+#footer .bema-footer-column li { list-style:none; padding:0; margin:0; }
+#footer .bema-footer-column li::before { content:none; }
+#footer .bema-footer-links, #footer .bema-footer-contact ul { display:grid; gap:8px; }
+#footer .bema-footer-column a { color:var(--bema-pet-300); text-decoration:none; overflow-wrap:anywhere; }
+#footer .bema-footer-column a:hover { color:var(--bema-white); text-decoration:underline; }
+#footer .bema-footer-column a:focus-visible { outline:2px solid var(--bema-white); outline-offset:3px; }
+#footer .bema-footer-logo { display:inline-block; margin:0 0 18px; }
+#footer .bema-footer-logo img { display:block; width:140px; height:auto; max-width:100%; object-fit:contain; }
+#footer .bema-footer-description { margin:0 0 20px; color:var(--bema-pet-300); }
+#footer .bema-footer-contact { margin:0 0 20px; font-style:normal; }
+#footer .bema-footer-contact a { color:var(--bema-white); }
+#footer .bema-footer-certifications { display:flex; flex-wrap:wrap; gap:8px; }
+#footer .bema-footer-certificate { display:inline-flex; align-items:center; padding:5px 10px; border:1px solid var(--bema-pet-700); border-radius:var(--bema-radius-sm); font-size:12px; font-weight:600; color:var(--bema-white); }
+#footer .footer-bottom { background:transparent; border-top:1px solid var(--bema-pet-800); color:var(--bema-pet-400); }
+#footer .footer-bottom a { color:var(--bema-pet-300); }
+@media(min-width:600px) {
+ #footer .custom-footer:has(.bema-footer-column) { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ #footer .custom-footer > :has(.bema-footer-brand), #footer .custom-footer > .bema-footer-brand { grid-column:1/-1; max-width:480px; }
+}
+@media(min-width:1100px) {
+ #footer .custom-footer:has(.bema-footer-column) { grid-template-columns:minmax(0,1.5fr) repeat(4,minmax(0,1fr)); gap:clamp(20px,2.5vw,36px); padding-block:64px; }
+ #footer .custom-footer > :has(.bema-footer-brand), #footer .custom-footer > .bema-footer-brand { grid-column:auto; max-width:none; }
+}
