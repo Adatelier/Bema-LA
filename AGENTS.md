@@ -16,3 +16,5 @@
 - EcoSection: verify evidence and scope for rPET carbon-footprint reduction up to 70%, lightweighting 20–30%, MONIKA 1 l pallet utilization 96.9%, and EKO-KOM savings before publication. Verify actual rPET category link and bottom-banner placement; host original film and poster on Shoptet CDN.
 
 - PrintSlab: verify production links to print inquiry and printing information, minimum order 1,000 units and service technologies. Homepage teaser is local preview only; full printing configurator remains separate.
+
+- B2BBento: homepage CSV animation and invoice toggle are demonstration only. Verify real ERP CSV import, reorder, invoice eligibility, contract price lists, order templates, registration/login URLs before production; do not advertise unsupported B2B features. Demo quantities and order identifiers are illustrative.
