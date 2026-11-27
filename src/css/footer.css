@@ -113,3 +113,37 @@
 #footer #signature > a.bema-footer-credit { display:inline-flex; align-items:center; vertical-align:middle; gap:4px; margin-left:5px; color:var(--bema-pet-300); text-decoration:none; }
 #footer #signature > a.bema-footer-credit img { position:static; display:block; width:25px; height:25px; object-fit:contain; margin:0; }
 #footer #signature > a.bema-footer-credit:hover { color:var(--bema-white); text-decoration:underline; }
+
+/* Footer v0.6 — remove Classic reserved logo column and center the full grid */
+#footer .custom-footer.bema-footer-ready {
+  display:block !important;
+  box-sizing:border-box;
+  width:100% !important;
+  max-width:100% !important;
+  flex:0 0 100% !important;
+  float:none !important;
+  margin-inline:0 !important;
+  padding-inline:0 !important;
+  left:auto !important;
+  right:auto !important;
+  transform:none !important;
+}
+#footer .footer-rows:has(.bema-footer-ready),
+#footer .footer-rows > .container:has(.bema-footer-ready) {
+  display:block !important;
+  box-sizing:border-box;
+}
+#footer .footer-rows > .container:has(.bema-footer-ready) {
+  width:100% !important;
+  max-width:var(--bema-container) !important;
+  margin-inline:auto !important;
+  padding-inline:var(--bema-gutter) !important;
+}
+#footer .custom-footer.bema-footer-ready > .bema-footer-grid {
+  box-sizing:border-box;
+  width:100% !important;
+  max-width:none !important;
+  margin-inline:0 !important;
+  padding-inline:0 !important;
+}
+#footer .custom-footer.bema-footer-ready > :not(.bema-footer-grid) { display:none !important; }
