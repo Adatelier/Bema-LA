@@ -85,3 +85,31 @@
 #footer .bema-footer-brand > .site-name.bema-footer-logo a { display:block; padding:0; margin:0; }
 #footer .bema-footer-brand > .site-name.bema-footer-logo img { width:140px; height:auto; max-height:none; }
 #footer .custom-footer:has(.bema-footer-column) > .bema-footer-logo-source { display:none !important; }
+
+/* Footer v0.5 — independent five-column layout and neutral logo positioning */
+#footer .custom-footer.bema-footer-ready { display:block !important; width:100%; }
+#footer .custom-footer.bema-footer-ready > .bema-footer-grid {
+  display:grid; grid-template-columns:minmax(0,1fr); align-items:start; gap:32px;
+  width:100% !important; max-width:none !important; margin:0; padding:0;
+}
+#footer .bema-footer-grid > .bema-footer-column { position:relative; width:100%; max-width:none; margin:0; padding:0; float:none; }
+#footer .bema-footer-grid > .bema-footer-brand { display:flex; flex-direction:column; align-items:flex-start; }
+#footer .bema-footer-brand > a.bema-footer-logo {
+  display:block; position:static !important; inset:auto !important; transform:none !important;
+  width:140px; max-width:100%; height:auto; float:none; padding:0; margin:0 0 18px;
+}
+#footer .bema-footer-brand > a.bema-footer-logo img {
+  display:block; position:static !important; inset:auto !important; transform:none !important;
+  width:100%; height:auto; max-height:none; margin:0; padding:0;
+}
+@media(min-width:600px) {
+ #footer .custom-footer.bema-footer-ready > .bema-footer-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ #footer .bema-footer-grid > .bema-footer-brand { grid-column:1/-1; max-width:480px; }
+}
+@media(min-width:1100px) {
+ #footer .custom-footer.bema-footer-ready > .bema-footer-grid { grid-template-columns:minmax(0,1.5fr) repeat(4,minmax(0,1fr)); gap:clamp(20px,2.5vw,36px); }
+ #footer .bema-footer-grid > .bema-footer-brand { grid-column:auto; max-width:none; }
+}
+#footer #signature > a.bema-footer-credit { display:inline-flex; align-items:center; vertical-align:middle; gap:4px; margin-left:5px; color:var(--bema-pet-300); text-decoration:none; }
+#footer #signature > a.bema-footer-credit img { position:static; display:block; width:25px; height:25px; object-fit:contain; margin:0; }
+#footer #signature > a.bema-footer-credit:hover { color:var(--bema-white); text-decoration:underline; }
