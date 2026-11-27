@@ -170,3 +170,19 @@
 @media(min-width:1024px) { #footer .bema-newsletter { grid-template-columns:repeat(2,minmax(0,1fr)); gap:40px; } }
 @media(min-width:1280px) { #footer .bema-newsletter { grid-template-columns:minmax(0,7fr) minmax(0,5fr); } }
 @media(max-width:599px) { #footer .bema-newsletter { padding-bottom:32px; margin-bottom:32px; } #footer .bema-newsletter-form :is(.bema-newsletter-email,.bema-newsletter-submit) { flex:1 0 100%; width:100%!important; } }
+
+/* Newsletter v0.8 — compact headline and inline native form controls */
+#footer .bema-newsletter { align-items:center; gap:24px; padding-bottom:32px; margin-bottom:32px; }
+#footer .bema-newsletter h2 { font-size:clamp(26px,2.4vw,38px); line-height:1.16; text-wrap:balance; max-width:24ch; }
+#footer .bema-newsletter-intro { display:none!important; }
+#footer .bema-newsletter-form { display:flex!important; flex-wrap:wrap; align-items:flex-start; gap:12px; }
+#footer .bema-newsletter-form > * { min-width:0; }
+#footer .bema-newsletter-form .bema-newsletter-field { flex:1 1 180px; width:auto!important; max-width:none!important; margin:0!important; order:0; }
+#footer .bema-newsletter-form .bema-newsletter-action { flex:0 0 auto; width:auto!important; margin:0!important; order:1; }
+#footer .bema-newsletter-form > .bema-newsletter-email { order:0; }
+#footer .bema-newsletter-form > .bema-newsletter-submit { order:1; }
+#footer .bema-newsletter-form :is(.consents,.consent,.form-consent,.gdpr,.newsletter-consent,.form-group:has(input[type=checkbox])) { order:2; flex:1 0 100%; }
+#footer .bema-newsletter-form > :not(.bema-newsletter-field):not(.bema-newsletter-action):not(.bema-newsletter-email):not(.bema-newsletter-submit):not(input[type=hidden]):not(:has(.bema-newsletter-email,.bema-newsletter-submit)) { order:2; flex:1 0 100%; }
+#footer .bema-newsletter-field label:has(+ input),#footer .bema-newsletter-field label[for] { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+@media(min-width:1024px) { #footer .bema-newsletter { grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:48px; } }
+@media(max-width:599px) { #footer .bema-newsletter-form .bema-newsletter-field,#footer .bema-newsletter-form .bema-newsletter-action { flex:1 0 100%; } }
