@@ -147,3 +147,26 @@
   padding-inline:0 !important;
 }
 #footer .custom-footer.bema-footer-ready > :not(.bema-footer-grid) { display:none !important; }
+
+/* Footer v0.7 — newsletter band from mockup, native Shoptet submission */
+#footer .custom-footer.bema-footer-ready > .bema-newsletter { display:grid !important; }
+#footer .bema-newsletter { box-sizing:border-box; grid-template-columns:minmax(0,1fr); align-items:center; gap:24px; width:100%; padding:0 0 48px; margin:0 0 48px; border-bottom:1px solid rgb(255 255 255 / 10%); font-family:var(--bema-font); text-align:left; }
+#footer .bema-newsletter h2 { font-family:var(--bema-font); font-size:var(--bema-h2); font-weight:720; font-stretch:115%; line-height:1.1; letter-spacing:-.018em; color:white; margin:0; text-align:left; text-transform:none; }
+#footer .bema-newsletter-body,#footer .bema-newsletter-native { box-sizing:border-box; min-width:0; width:100%!important; max-width:none!important; float:none!important; padding:0!important; margin:0!important; background:transparent!important; border:0; color:var(--bema-pet-300); text-align:left; }
+#footer .bema-newsletter-old-title { display:none!important; }
+#footer .bema-newsletter-form { display:flex; flex-wrap:wrap; align-items:center; gap:12px; margin:0; padding:0; width:100%; max-width:none; color:var(--bema-pet-300); }
+#footer .bema-newsletter-form :is(.form-group,.input-wrapper,.input-group,.newsletter-input,.newsletter-form-input):has(.bema-newsletter-email) { flex:1 1 180px; min-width:0; width:auto; margin:0; }
+#footer .bema-newsletter-form :is(.form-group,.input-group):has(.bema-newsletter-email):has(.bema-newsletter-submit) { display:flex; flex-wrap:wrap; align-items:center; gap:12px; }
+#footer .bema-newsletter-email { box-sizing:border-box; flex:1 1 180px; width:100%; min-width:0; height:52px!important; padding:0 24px!important; margin:0!important; border:1px solid rgb(255 255 255 / 14%)!important; border-radius:999px!important; background:rgb(255 255 255 / 6%)!important; color:white!important; font:400 16px/1.2 var(--bema-font); box-shadow:none; }
+#footer .bema-newsletter-email::placeholder { color:var(--bema-pet-400); opacity:1; }
+#footer .bema-newsletter-email:focus { outline:2px solid var(--bema-pet-400); outline-offset:2px; }
+#footer .bema-newsletter-submit { box-sizing:border-box; display:inline-flex!important; align-items:center; justify-content:center; flex:0 0 auto; width:auto!important; min-width:112px; height:52px!important; padding:0 26px!important; margin:0!important; border:1px solid white!important; border-radius:999px!important; background:white!important; color:var(--bema-ink)!important; font:620 16px/1.2 var(--bema-font); text-transform:none; cursor:pointer; }
+#footer .bema-newsletter-submit::before,#footer .bema-newsletter-submit::after { content:none!important; }
+#footer .bema-newsletter-submit:hover { background:var(--bema-pet-100)!important; }
+#footer .bema-newsletter-submit:focus-visible { outline:2px solid white; outline-offset:3px; }
+#footer .bema-newsletter-form :is(.consents,.consent,.form-consent,.gdpr,.newsletter-consent,.form-group:has(input[type=checkbox])) { flex:1 0 100%; max-width:100%; color:var(--bema-pet-400); font-size:13px; line-height:1.5; }
+#footer .bema-newsletter-body p,#footer .bema-newsletter-body label { color:var(--bema-pet-400); font-size:13px; line-height:1.5; }
+#footer .bema-newsletter-body a { color:var(--bema-pet-300); text-decoration:underline; }
+@media(min-width:1024px) { #footer .bema-newsletter { grid-template-columns:repeat(2,minmax(0,1fr)); gap:40px; } }
+@media(min-width:1280px) { #footer .bema-newsletter { grid-template-columns:minmax(0,7fr) minmax(0,5fr); } }
+@media(max-width:599px) { #footer .bema-newsletter { padding-bottom:32px; margin-bottom:32px; } #footer .bema-newsletter-form :is(.bema-newsletter-email,.bema-newsletter-submit) { flex:1 0 100%; width:100%!important; } }
