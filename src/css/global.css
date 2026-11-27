@@ -208,3 +208,11 @@ body { background-color: var(--bema-background); color: var(--bema-text); font-f
 .in-index .bema-btn.bema-btn-sm { min-height:36px; }
 .in-index .bema-btn.bema-btn-lg { min-height:52px; }
 .in-index .bema-btn.bema-btn-xl { min-height:60px; }
+
+/* Full-width custom BEMA article pages; retain Classic readable width for ordinary articles. */
+@media(min-width:1200px) {
+  .content-inner:has(.bema-print-page) {
+    width:100%;
+    max-width:none!important;
+  }
+}
