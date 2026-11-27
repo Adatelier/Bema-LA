@@ -1,0 +1,25 @@
+<section class="bema-finder" data-feed="REPLACE_WITH_RELATIVE_FEED_URL" aria-labelledby="bema-finder-title">
+  <div class="bema-container">
+    <div class="bema-finder-panel">
+      <div>
+        <h2 id="bema-finder-title">Najděte obal podle parametrů</h2>
+        <p class="bema-finder-lead">Vyberte materiál, objem a hrdlo. Počet vhodných produktů uvidíte hned.</p>
+        <div class="bema-finder-fields">
+          <fieldset><legend>Co hledáte</legend><div class="bema-finder-options" data-bema-options="kind"></div></fieldset>
+          <fieldset><legend>Materiál</legend><div class="bema-finder-options" data-bema-options="material"></div></fieldset>
+          <fieldset><legend>Objem</legend><div class="bema-finder-options" data-bema-options="volume"></div></fieldset>
+          <div class="bema-finder-selects">
+            <label>Hrdlo<select data-bema-field="neck"><option value="">Libovolné</option></select></label>
+            <label>Odvětví<select data-bema-field="sector"><option value="">Libovolné</option></select></label>
+          </div>
+        </div>
+      </div>
+      <div class="bema-finder-preview"><p>Například</p><ul class="bema-finder-results"></ul><p data-bema-message>Načítání produktů…</p></div>
+      <div class="bema-finder-bottom">
+        <p aria-live="polite">Vhodných produktů: <strong data-bema-count>–</strong></p>
+        <button type="button" class="bema-finder-reset">Vymazat výběr</button>
+        <button type="button" class="bema-btn bema-btn-primary" data-bema-show disabled>Zobrazit produkty</button>
+      </div>
+    </div>
+  </div>
+</section>
