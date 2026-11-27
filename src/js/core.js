@@ -4,44 +4,23 @@
     const footer = document.querySelector('#footer');
     if (!footer) return;
     const brand = footer.querySelector('.bema-footer-brand');
-    if (brand && !brand.dataset.bemaLogoReady) {
-      const target = brand.querySelector('.bema-footer-logo');
-      const existing = target?.querySelector('img');
-      const valid = existing && existing.getAttribute('src') && !existing.getAttribute('src').includes('URL_LOGA');
-      const headerLogo = document.querySelector('#header .site-name img');
-      const nativeLogo = [...footer.querySelectorAll('img')].find(img => {
-        if (brand.contains(img) || img.closest('#signature, .footer-bottom, .bema-footer-column')) return false;
-        const src = img.getAttribute('src') || '';
-        return /bema|\/user\/logos\//i.test(src + ' ' + img.alt) && !/shoptet-logo/i.test(src);
-      });
-      const source = nativeLogo || headerLogo;
-      if (valid || source) {
-        if (!valid && source) {
-          const link = target || document.createElement('a');
-          link.className = 'bema-footer-logo';
-          link.href = '/';
-          link.setAttribute('aria-label', 'BEMA – úvodní stránka');
-          const image = source.cloneNode(false);
-          image.alt = 'BEMA';
-          image.loading = 'lazy';
-          image.decoding = 'async';
-          image.removeAttribute('fetchpriority');
-          image.removeAttribute('id');
-          image.removeAttribute('width');
-          image.removeAttribute('height');
-          link.replaceChildren(image);
-          if (!target) brand.prepend(link);
+    if (brand && !brand.querySelector('.site-name.bema-footer-logo')) {
+      const nativeLogo = footer.querySelector('.site-name');
+      if (nativeLogo && !brand.contains(nativeLogo)) {
+        const grid = nativeLogo.closest('.custom-footer');
+        let wrapper = nativeLogo;
+        if (grid) {
+          while (wrapper.parentElement && wrapper.parentElement !== grid) wrapper = wrapper.parentElement;
         }
-        if (nativeLogo) {
-          let wrapper = nativeLogo.closest('a') || nativeLogo;
-          while (wrapper.parentElement && wrapper.parentElement !== footer) {
-            const parent = wrapper.parentElement;
-            if (parent.querySelector('.bema-footer-column') || parent.textContent.trim() || parent.querySelectorAll('img').length !== 1 || parent.querySelector('button, input, form') || parent.querySelectorAll('a').length > 1) break;
-            wrapper = parent;
-          }
+        const placeholder = brand.querySelector('.bema-footer-logo');
+        if (placeholder) placeholder.remove();
+        nativeLogo.classList.add('bema-footer-logo');
+        const image = nativeLogo.querySelector('img');
+        if (image) image.alt = 'BEMA';
+        brand.prepend(nativeLogo);
+        if (wrapper !== nativeLogo && !wrapper.textContent.trim() && !wrapper.querySelector('img, a, button, input, form, .bema-footer-column')) {
           wrapper.classList.add('bema-footer-logo-source');
         }
-        brand.dataset.bemaLogoReady = 'true';
       }
     }
     if (footer.querySelector('.bema-footer-credit')) return;
