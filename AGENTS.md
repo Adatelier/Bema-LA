@@ -7,3 +7,6 @@
 - Preserve server-rendered content, canonical URLs, structured data; llms.txt and Markdown supplement SEO, not replace it.
 - Keep src and dist synchronized. Development via jsDelivr; final export to Shoptet CDN.
 - Public repository: no credentials, customer data or unapproved client source/assets.
+
+## Production launch checklist — QuickFinder
+- Replace sandbox product supplier XML feed with production feed in HTML data-feed. Never commit the hash or private supplier XML to public GitHub. Confirm public/customer-facing data only; browser-visible feed URL must be safe to disclose, otherwise serve a sanitized public JSON feed through backend. Verify exact XML schema, category/parameter mapping, price visibility, volume units, variant deduplication, filtered Shoptet category links and performance before launch.
