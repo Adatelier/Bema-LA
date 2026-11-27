@@ -10,3 +10,5 @@
 
 ## Production launch checklist — QuickFinder
 - Replace sandbox product supplier XML feed with production feed in HTML data-feed. Never commit the hash or private supplier XML to public GitHub. Confirm public/customer-facing data only; browser-visible feed URL must be safe to disclose, otherwise serve a sanitized public JSON feed through backend. Verify exact XML schema, category/parameter mapping, price visibility, volume units, variant deduplication, filtered Shoptet category links and performance before launch.
+
+- BundleBand: before launch verify compatible neck/closure pairs, actual quantity-tier prices and real automatic 5% cart discount; draft HTML is visual only. Verify bottom banner placement and ordering independently of footer columns.
