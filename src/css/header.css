@@ -1,0 +1,71 @@
+/* BEMA header v0.1 — native Classic layout, no DOM mutations */
+#header {
+  --bema-header-bg: var(--bema-white);
+  --bema-header-fg: var(--bema-ink);
+  --bema-header-field: var(--bema-pet-25);
+  --bema-header-line: var(--bema-pet-200);
+  background: var(--bema-header-bg);
+  color: var(--bema-header-fg);
+  box-shadow: none;
+  border-bottom: 1px solid var(--bema-header-line);
+}
+.in-index #header {
+  --bema-header-bg: var(--bema-ink);
+  --bema-header-fg: var(--bema-white);
+  --bema-header-field: var(--bema-pet-800);
+  --bema-header-line: var(--bema-pet-700);
+}
+#header > .navigation-wrapper {
+  box-sizing: border-box;
+  max-width: var(--bema-container);
+  width: 100%;
+  padding-inline: var(--bema-gutter);
+  margin-inline: auto;
+}
+#header .header-top { background: transparent; border: 0; min-height: var(--bema-header-height); }
+#header .site-name img { display: block; max-height: 40px; width: auto; max-width: 100%; object-fit: contain; }
+#header .search { min-width: 0; }
+#header .search-form fieldset { position: relative; padding: 0; margin: 0; border: 0; }
+#header .search-input {
+  box-sizing: border-box;
+  height: 44px;
+  width: 100%;
+  padding: 0 82px 0 16px;
+  background: var(--bema-header-field);
+  color: var(--bema-header-fg);
+  border: 1px solid var(--bema-header-line);
+  border-radius: var(--bema-radius-full);
+  box-shadow: none;
+  font-size: 16px;
+}
+#header .search-input::placeholder { color: var(--bema-header-fg); opacity: .75; }
+#header .search-form button[type=submit] {
+  position: absolute; inset: 4px 4px auto auto;
+  height: 36px; min-height: 36px; padding: 0 12px;
+  border: 0; border-radius: var(--bema-radius-full);
+  background: var(--bema-primary); color: var(--bema-white);
+  font-size: 13px; line-height: 1; text-transform: none;
+}
+#header .navigation-buttons > a { color: var(--bema-header-fg); background: transparent; border: 0; min-height: 44px; min-width: 44px; }
+#header .cart-price { color: var(--bema-header-fg); }
+#header .search-whisperer { color: var(--bema-ink); }
+#header .search-whisperer a { color: var(--bema-ink); }
+#header a:focus-visible, #header button:focus-visible, #header input:focus-visible { outline: 2px solid var(--bema-red-400); outline-offset: 2px; }
+@media (min-width: 992px) {
+  #header #navigation, #header #navigation .navigation-in { background: transparent; border: 0; }
+  #header #navigation .menu-level-1 > li > a { background: transparent; color: var(--bema-header-fg); font-size: 14px; text-transform: none; }
+  #header #navigation .menu-level-1 > li > a b { font-weight: 600; }
+  #header #navigation .menu-level-2 { background: var(--bema-white); color: var(--bema-ink); border: 1px solid var(--bema-border); box-shadow: var(--bema-shadow-md); }
+  #header #navigation .menu-level-2 a { color: var(--bema-ink); }
+  #header .menu-helper { background: transparent; color: var(--bema-header-fg); }
+  #header .menu-helper > span { color: var(--bema-header-fg); }
+  #header .menu-helper > .menu-level-1 { background: var(--bema-white); color: var(--bema-ink); }
+  #header .menu-helper > .menu-level-1 a { color: var(--bema-ink); }
+}
+@media (max-width: 991px) {
+  #header .header-top { min-height: var(--bema-header-mobile); }
+  #header .site-name img { max-height: 30px; }
+}
+@media (hover: hover) {
+  #header .search-form button[type=submit]:hover { background: var(--bema-primary-hover); }
+}
