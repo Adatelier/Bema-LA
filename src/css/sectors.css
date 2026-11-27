@@ -1,5 +1,5 @@
 /* BEMA sector bento v1 — server-rendered content, CSS only */
-.in-index .bema-sectors { box-sizing:border-box; color:var(--bema-ink); padding-block:var(--bema-section-tight) var(--bema-section-space); text-align:left; }
+.in-index .bema-sectors { box-sizing:border-box; color:var(--bema-ink); padding-block:var(--bema-section-tight) 0; text-align:left; }
 .in-index .bema-sectors .bema-container { width:100%; }
 .in-index .bema-sectors h2 { color:var(--bema-ink); margin:0 0 16px; font-size:var(--bema-h2); font-weight:720; line-height:1.1; letter-spacing:-.018em; }
 .in-index .bema-sectors-lead { color:var(--bema-pet-600); max-width:672px; font-size:clamp(16px,1.4vw,19px); margin:0 0 32px; }
