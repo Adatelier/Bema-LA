@@ -77,3 +77,11 @@
 #footer .bema-footer-credit a { color:inherit; text-decoration:none; }
 #footer .bema-footer-credit a:hover { color:var(--bema-white); text-decoration:underline; }
 #footer .bema-footer-credit a:focus-visible { outline:2px solid var(--bema-white); outline-offset:3px; }
+
+/* Footer v0.4 — native Classic logo moved into brand column */
+#footer .bema-footer-brand > .site-name.bema-footer-logo {
+  display:block; width:fit-content; max-width:100%; float:none; padding:0; margin:0 0 18px; text-align:left;
+}
+#footer .bema-footer-brand > .site-name.bema-footer-logo a { display:block; padding:0; margin:0; }
+#footer .bema-footer-brand > .site-name.bema-footer-logo img { width:140px; height:auto; max-height:none; }
+#footer .custom-footer:has(.bema-footer-column) > .bema-footer-logo-source { display:none !important; }
