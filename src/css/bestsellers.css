@@ -41,3 +41,8 @@
 .in-index #products-1.bema-dragging { scroll-snap-type:none; cursor:grabbing; user-select:none; }
 @media(min-width:768px) { .in-index #products-1.bema-bestseller-track > .product { flex-basis:clamp(270px,23vw,340px)!important; width:clamp(270px,23vw,340px)!important; } }
 @media(prefers-reduced-motion:reduce) { .in-index #products-1 .p > .image img { transition:none; } }
+
+/* Remove Classic outer product section frame, retain product card borders. */
+.in-index .content-wrapper:has(#products-1) { border:0; background:var(--bema-background); }
+.in-index main.content:has(> #products-1) { background:transparent; border:0; box-shadow:none; }
+.in-index .content-wrapper-in:has(#products-1) > .container { background:transparent; border:0; box-shadow:none; }
