@@ -135,3 +135,12 @@ body { background-color: var(--bema-background); color: var(--bema-text); font-f
 .bema-btn:disabled { opacity: .45; cursor: not-allowed; }
 .bema-btn:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
 @media (prefers-reduced-motion: reduce) { .bema-btn { transition: none; } }
+
+/* Mockup typography, independent of Classic headings */
+.in-index :is(.bema-hero,.bema-sectors,.bema-startup), #footer .bema-footer-column { font-family:var(--bema-font); font-stretch:100%; }
+.in-index :is(.bema-hero,.bema-sectors,.bema-startup) :is(p,li,dt,span,strong), #footer .bema-footer-column :is(p,li,a,h2) { font-family:var(--bema-font); }
+.in-index .bema-sectors h2 { font-family:var(--bema-font); font-stretch:115%; text-wrap:balance; }
+.in-index .bema-sector-copy h3 { font-stretch:110%; text-wrap:balance; }
+.in-index .bema-startup h2 { font-family:var(--bema-font); font-stretch:125%; text-wrap:balance; }
+.in-index .bema-startup-step-head h3 { font-family:var(--bema-font); font-stretch:100%; }
+.in-index .bema-hero .bema-hero-proof dd { font-family:var(--bema-font-mono); }
