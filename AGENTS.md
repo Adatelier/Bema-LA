@@ -20,3 +20,5 @@
 - B2BBento: homepage CSV animation and invoice toggle are demonstration only. Verify real ERP CSV import, reorder, invoice eligibility, contract price lists, order templates, registration/login URLs before production; do not advertise unsupported B2B features. Demo quantities and order identifiers are illustrative.
 
 - Newsletter: preserve native Shoptet subscription/consent/validation, verify exact form markup and successful subscription; the mockup's first-order −5% offer requires confirmed coupon automation before launch.
+
+- ProductionSpec: verify monthly manufacturing capacity, machine counts, volume ranges, certification dates, UCHEM description and destination URLs before launch; use original production photo on Shoptet CDN.
