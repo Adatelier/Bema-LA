@@ -67,3 +67,13 @@
 @media(min-width:600px) and (max-width:1099px) {
   #footer .custom-footer:has(.bema-footer-column) > :has(.bema-footer-brand) { max-width:480px !important; }
 }
+
+
+/* Footer v0.3: brand logo belongs to the contact column */
+#footer .bema-footer-logo { display:inline-block; margin:0 0 18px; }
+#footer .bema-footer-logo img { display:block; width:140px; max-width:100%; height:auto; object-fit:contain; }
+#footer .bema-footer-logo-source { display:none !important; }
+#footer .bema-footer-credit { color:var(--bema-pet-300); white-space:nowrap; }
+#footer .bema-footer-credit a { color:inherit; text-decoration:none; }
+#footer .bema-footer-credit a:hover { color:var(--bema-white); text-decoration:underline; }
+#footer .bema-footer-credit a:focus-visible { outline:2px solid var(--bema-white); outline-offset:3px; }
