@@ -34,3 +34,36 @@
  #footer .custom-footer:has(.bema-footer-column) { grid-template-columns:minmax(0,1.5fr) repeat(4,minmax(0,1fr)); gap:clamp(20px,2.5vw,36px); padding-block:64px; }
  #footer .custom-footer > :has(.bema-footer-brand), #footer .custom-footer > .bema-footer-brand { grid-column:auto; max-width:none; }
 }
+
+
+/* Footer v0.2 — isolate Classic banner wrappers */
+#footer .footer-rows,
+#footer .footer-rows > .container,
+#footer .custom-footer,
+#footer .custom-footer > *,
+#footer .custom-footer .banner,
+#footer .custom-footer .banner-wrapper,
+#footer .custom-footer .banner-content,
+#footer .custom-footer .banner-text {
+  background-color: transparent !important;
+  background-image: none;
+}
+#footer .custom-footer:has(.bema-footer-column) > :not(:has(.bema-footer-column)):not(.bema-footer-column) {
+  display: none;
+}
+#footer .custom-footer:has(.bema-footer-column) > :has(.bema-footer-column) {
+  display: block;
+  width: auto !important;
+  max-width: none !important;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+}
+#footer .custom-footer .bema-footer-column { background: transparent; }
+#footer .bema-footer-title { color: var(--bema-white) !important; }
+#footer .bema-footer-contact a { color: var(--bema-white) !important; }
+#footer .bema-footer-logo:has(img[src="URL_LOGA"]),
+#footer .bema-footer-logo:has(img[src$="/URL_LOGA"]) { display: none; }
+@media(min-width:600px) and (max-width:1099px) {
+  #footer .custom-footer:has(.bema-footer-column) > :has(.bema-footer-brand) { max-width:480px !important; }
+}
