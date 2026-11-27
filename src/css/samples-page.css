@@ -67,3 +67,18 @@ body .content-inner .bema-samples-page input.bema-sp-search {
 .bema-samples-page .bema-sp-form .bema-sp-consent input {width:16px;height:16px;margin:3px 0 0;flex:none}
 .bema-samples-page .bema-sp-form .bema-sp-submit {min-height:52px}
 @media(max-width:480px){.bema-samples-page .bema-sp-slot{min-height:100px}}
+
+/* SamplesPage v1.2 — explicit descendant selectors, safe for distribution */
+#content .bema-samples-page .bema-sp-form input:not([type=checkbox]),
+#content .bema-samples-page .bema-sp-form select,
+#content .bema-samples-page .bema-sp-form textarea,
+#content .bema-samples-page input.bema-sp-search,
+body .content-inner .bema-samples-page .bema-sp-form input:not([type=checkbox]),
+body .content-inner .bema-samples-page .bema-sp-form select,
+body .content-inner .bema-samples-page .bema-sp-form textarea {
+ display:block!important;box-sizing:border-box!important;width:100%!important;max-width:none!important;min-height:46px!important;height:46px!important;padding:12px 14px!important;margin:0!important;border:1px solid #d3dbe3!important;border-radius:10px!important;background-color:#fff!important;color:#0d1014!important;font:400 15px/1.4 var(--bema-font,Arial,sans-serif)!important;box-shadow:none!important;
+}
+#content .bema-samples-page .bema-sp-form textarea,
+body .content-inner .bema-samples-page .bema-sp-form textarea {height:112px!important;min-height:112px!important;resize:vertical}
+#content .bema-samples-page .bema-sp-form select,
+body .content-inner .bema-samples-page .bema-sp-form select {appearance:auto!important;padding-right:24px!important}
